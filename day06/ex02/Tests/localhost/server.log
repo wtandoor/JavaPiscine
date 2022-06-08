@@ -1,0 +1,36 @@
+/*C7*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C8*/SET SCHEMA PUBLIC
+set schema PUBLIC
+/*C9*/SET SCHEMA PUBLIC
+set schema PUBLIC
+INSERT INTO PRODUCT VALUES(5,'a',0)
+COMMIT
+INSERT INTO PRODUCT VALUES(6,'b',1)
+COMMIT
+INSERT INTO PRODUCT VALUES(7,'c',2)
+COMMIT
+INSERT INTO PRODUCT VALUES(8,'d',3)
+COMMIT
+INSERT INTO PRODUCT VALUES(9,'e',4)
+COMMIT
+/*C10*/SET SCHEMA PUBLIC
+set schema PUBLIC
+drop table PRODUCT
+/*C11*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C8*/DISCONNECT
+/*C9*/drop table if exists product cascade
+create table if not exists product(\u000a                                      id integer identity primary key,\u000a                                      name varchar(15)  not null unique ,\u000a                                      price integer not null\u000a)
+/*C12*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/INSERT INTO PRODUCT VALUES(0,'qwerty',1000)
+COMMIT
+INSERT INTO PRODUCT VALUES(1,'12345',2000)
+COMMIT
+INSERT INTO PRODUCT VALUES(2,'zxcvb',3000)
+COMMIT
+INSERT INTO PRODUCT VALUES(3,'asdfg',4000)
+COMMIT
+INSERT INTO PRODUCT VALUES(4,'uiop',5000)
+COMMIT
